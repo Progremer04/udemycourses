@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Google Sheet.css">
+</head>
+<body>
+  <div class="container">
+    <form method="post" action="https://script.google.com/macros/s/AKfycbwtDdyUPyGvgnUclD3H2RV2WQ7kj7E94v8Y8Z4TIV207_lTddBk9TYeBky_fQ8O5kwPJQ/exec" name="contact-form" onsubmit="extractCourseName()">
+      <h4>Add Link</h4>
+      <input type="hidden" name="coursesname" id="coursesname">
+      <input type="text" name="linkcourses" id="linkcourses" placeholder="Link to Courses" required>
+      <input type="submit" value="Submit" id="submit">
+    </form>
+  </div>
+<script src="/GoogleSheet.js"></script>
+  <script>
+    // Function to extract the course name from the Udemy URL
+    function extractCourseName() {
+      const linkcourses = document.getElementById('linkcourses').value;
+      const courseNameField = document.getElementById('coursesname');
+
+      // Extract course name from the Udemy URL using regex
+      const regex = /\/course\/([a-zA-Z0-9\-]+)/;
+      const match = linkcourses.match(regex);
+
+      if (match) {
+        const courseName = match[1];  // Extract the course name
+        courseNameField.value = courseName;  // Set it in the hidden input field
+      } else {
+        courseNameField.value = "Unknown Course";  // Fallback if course name isn't found
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'poppins', sans-serif;
+	font-size: 18px;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	width: 500px;
+	padding: 30px;
+	border: 1px solid #eeeeee;
+	border-radius: 10px;
+	background-color: #003b5b;
+}
+
+h4 {
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px 5px #84db12;
+	animation: textshadow 0.9s infinite alternate;
+	/* Defines the animation */
+}
+
+@keyframes textshadow {
+	0% {
+		text-shadow: 12px 1px 20px #84db12;
+		/* Initial shadow */
+	}
+
+	50% {
+		text-shadow: 14px 1px 20px #84db12;
+		/* Bigger shadow */
+	}
+
+	75% {
+		text-shadow: 10px 1px 20px #d4527d;
+		/* Back to the initial shadow */
+	}
+
+	100% {
+		text-shadow: 7px 7px 20px #5222d6;
+		/* Back to the initial shadow */
+	}
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	border: none;
+	padding: 15px;
+	border-radius: 25px 25px 5px 5%;
+	box-shadow: 3px 3px 3px 10px #052130;
+	animation: inputtext 0.5 infinite linear;
+}
+
+@keyframes inputtext {
+	0% {
+		box-shadow: 3px 3px 3px 10px #1d0458;
+
+	}
+
+	50% {
+		box-shadow: 3px 3px 3px 10px #200e25;
+
+	}
+
+	75% {
+		box-shadow: 3px 3px 3px 10px #590c86;
+
+	}
+
+	100% {
+		box-shadow: 3px 3px 3px 10px #042638;
+
+	}
+}
+
+textarea {
+	width: 100%;
+	padding: 10px;
+}
+
+#submit {
+	border: none;
+	background-color: orangered;
+	color: #110e0e;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	transition: ease-out 0.5s;
+	box-shadow: 1px 5px 23px #110e0e;
+	animation: btn 3.5s infinite alternate-reverse;
+}
+
+@keyframes btn {
+	0% {
+		color: #fff;
+		background-color: #db8bba;
+		box-shadow: 1px 5px 32px #110e0e;
+	}
+
+	50% {
+		color: antiquewhite;
+		background-color: #1c3441;
+		box-shadow: 1px 5px 32px #15538d;
+	}
+
+	75% {
+		color: cornsilk;
+		background-color: #170d4e;
+		box-shadow: 1px 5px 32px #180a69;
+	}
+
+	100% {
+		color: antiquewhite;
+		background-color: #837f7f;
+		box-shadow: 1px 5px 32px #650868;
+	}
+}
+
+
+#submit:hover {
+	background-color: #c56161;
+	box-shadow: 1px 5px 23px #8516c5;
+	cursor: pointer;
+}
