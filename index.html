@@ -5,11 +5,11 @@
 </head>
 <body>
   <div class="container">
-    <form method="post" action="https://script.google.com/macros/s/AKfycbwtDdyUPyGvgnUclD3H2RV2WQ7kj7E94v8Y8Z4TIV207_lTddBk9TYeBky_fQ8O5kwPJQ/exec" name="contact-form">
+    <form method="post" action="https://script.google.com/macros/s/AKfycbwtDdyUPyGvgnUclD3H2RV2WQ7kj7E94v8Y8Z4TIV207_lTddBk9TYeBky_fQ8O5kwPJQ/exec" name="contact-form" onsubmit="extractCourseName()">
       <h4>Add Link</h4>
       <input type="hidden" name="coursesname" id="coursesname">
       <input type="text" name="linkcourses" id="linkcourses" placeholder="Link to Courses" required>
-      <input type="submit" value="Submit" id="submit" onsubmit="extractCourseName()>
+      <input type="submit" value="Submit" id="submit">
     </form>
   </div>
 <script src="/GoogleSheet.js"></script>
